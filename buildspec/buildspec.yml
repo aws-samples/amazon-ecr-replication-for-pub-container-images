@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    AWS_DEFAULT_REGION: /pub-image-mirror/target-region-param:targetRegion
+    AWS_ACCESS_KEY_ID: /pub-image-mirror/target-region-param:targetRegionAK
+    AWS_SECRET_ACCESS_KEY: /pub-image-mirror/target-region-param:targetRegionSK
+
+phases:
+  install:
+    runtime-versions: 
+        docker: 18
+  pre_build:
+    commands:
+      - |
+        echo "authenticate to target ECR"
+        aws sts get-caller-identity
+  build:
+    commands:
+      - |
+        echo "Hello, CodeBuild!, push to ${targetRegion}"
+        bash ./mirror-images.sh
+  post_build:
+    commands:
+      - echo "post_build phase"
