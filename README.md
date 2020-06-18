@@ -43,9 +43,9 @@ You may deploy this solution with AWS CDK to any AWS global regions.
 
 ### Destroy the Stack
 
-	```bash
-	$ npx cdk destroy
-	```
+```bash
+$ npx cdk destroy
+```
 
 ## Security
 
