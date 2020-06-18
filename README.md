@@ -28,7 +28,7 @@ You may deploy this solution with AWS CDK to any AWS global regions.
 
 	```bash
 	$ git clone https://github.com/aws-samples/amazon-ecr-replication-for-pub-container-images.git
-	$ cd pub-images-mirror
+	$ cd amazon-ecr-replication-for-pub-container-images
 	$ npm install
 	```
 
