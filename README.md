@@ -27,7 +27,7 @@ You may deploy this solution with AWS CDK to any AWS global regions.
 3. Clone this project and install required npm modules
 
 	```bash
-	$ git clone https://github.com/aws-samples/pub-images-mirror.git
+	$ git clone https://github.com/aws-samples/amazon-ecr-replication-for-pub-container-images.git
 	$ cd pub-images-mirror
 	$ npm install
 	```
