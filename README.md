@@ -12,8 +12,8 @@ This solution is intend to demostrate an automated process to replicate public c
 
 1. The administrator will modify the required image path and its tag to images.txt and submit it to the AWS CodeCommit repository.
 2. According to the pre-configured trigger rules, AWS CodeCommit will trigger AWS CodeBuild to start the build task.
-3. The AWS CodeBuild build task pulls these images from the public image repository based on the image list in images.txt.
-4. The AWS CodeBuild build task will pull the local images and retag them to point to the ECR repository, and then push these images to the ECR repository.
+3. The AWS CodeBuild build task pull these images from the public image repository based on the image list in images.txt.
+4. The AWS CodeBuild build task will tag these images to make them point to the target ECR repository, and then push these images to ECR repository.
 5. Container management platforms such as Amazon ECS or EKS pull these images from the local ECR to run the containers.
 
 
