@@ -1,6 +1,6 @@
 # Public container images mirror solution
 
-In the container community, most of pubic container images are located in Docker hub, Quay and GCR, in order to get fast, stable and secure access to these public images from Amazon ECS or EKS, it's recommended to replicate these images to Amazon ECR. There are 2 use cases to have replicated public container images in your private ECR container registry:
+In the container community, most public container images are located in Docker hub, Quay and GCR. In order to get fast, stable and secure access to these public images from Amazon ECS or EKS, it's recommended to replicate these images to Amazon ECR. There are 2 use cases to have replicated public container images in your private ECR container registry:
 1. Replicate frequently used container images into ECR to get fast and stable access in conatiner platform.
 2. Due to security and compliance consideration, you may need to have your ECS/EKS cluster in subnet without internet access and use VPC private link to get access to ECR.
 
