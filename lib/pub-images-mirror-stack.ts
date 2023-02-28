@@ -1,11 +1,14 @@
-import * as codecommit from '@aws-cdk/aws-codecommit';
-import * as codebuild from '@aws-cdk/aws-codebuild';
-import * as targets from '@aws-cdk/aws-events-targets';
-import * as secretsmanager from '@aws-cdk/aws-secretsmanager'
-import * as iam from '@aws-cdk/aws-iam';
-import * as assets from '@aws-cdk/aws-s3-assets';
+import { Construct } from 'constructs';
+import { App, Stack } from 'aws-cdk-lib';
+
+import * as codecommit from 'aws-cdk-lib/aws-codecommit';
+import * as codebuild from 'aws-cdk-lib/aws-codebuild';
+import * as targets from 'aws-cdk-lib/aws-events-targets';
+import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager'
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as assets from 'aws-cdk-lib/aws-s3-assets';
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
 
 export class PubImagesMirrorStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -41,7 +44,7 @@ export class PubImagesMirrorStack extends cdk.Stack {
       repositoryName: 'pub-images-mirror',
       code: {
         s3: {
-          bucket: asset.s3BucketName, 
+          bucket: asset.s3BucketName,
           key: asset.s3ObjectKey
         }
       }
